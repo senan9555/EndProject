@@ -1,0 +1,52 @@
+﻿@model Employee
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Personal Əlavə Et</h4>
+
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label asp-for="FullName">Ad Soyad</label>
+                        <input asp-for="FullName" class="form-control">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">Vəzifə Seçin</label>
+                        <select class="form-control" name="posId">
+
+                            @foreach (Position position in ViewBag.Positions)
+                            {
+                                    <option value="@position.Id">@position.Name</option>
+                            }
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Wage">Maaş</label>
+                        <input asp-for="Wage" class="form-control">
+                        <span asp-validation-for="Wage" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="PhoneNumber">Mobil Nömrə</label>
+                        <input asp-for="PhoneNumber" class="form-control">
+                        <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mr-2">Təsdiq</button>
+                    <a asp-action="Index" class="btn btn-secondary text-white">Geri Qayıt</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+     }

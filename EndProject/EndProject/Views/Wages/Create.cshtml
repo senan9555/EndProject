@@ -1,0 +1,41 @@
+﻿@model Wage
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Maaş Əlavə Et</h4>
+
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label for="exampleFormControlSelect1">İşçi Seçin</label>
+                        <select class="form-control" id="exampleFormControlSelect1">
+                           @foreach (Employee item in ViewBag.Employee)
+                            {
+                                <option>@item.FullName</option>
+                            }
+                        </select>
+                    </div>
+                      <div class="form-group">
+                        <label asp-for="Description">Maaş Haqqında</label>
+                        <input asp-for="Description" class="form-control">
+                        <span asp-validation-for="Description" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Money">Məbləğ</label>
+                        <input asp-for="Money" class="form-control">
+                        <span asp-validation-for="Money" class="text-danger"></span>
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Əlavə Et</button>
+                    <a asp-action="Index" class="btn btn-secondary text-white">Geri</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+     }

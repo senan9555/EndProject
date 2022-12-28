@@ -1,0 +1,53 @@
+﻿@model UpdateVM
+<div class="row">
+    <div class="col-md-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">İtifadəçi Məlumatlarını Dəyişmək</h4>
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <form class="forms-sample" method="post">
+                    <div class="form-group">
+                        <label asp-for="UserName">İstifadəçi Adı</label>
+                        <input asp-for="UserName" class="form-control">
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FullName">Ad Soyad</label>
+                        <input asp-for="FullName" class="form-control">
+                        <span asp-validation-for="FullName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Email"></label>
+                        <input asp-for="Email" class="form-control">
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Rolu Dəyiş</label>
+                        <select class="form-control" name="newRole">
+                            @foreach (string item in Model.Roles)
+                            {
+                                if (Model.Role == item)
+                                {
+                                    <option selected value="@item">@item</option>
+                                }
+                                else
+                                {
+                                    <option value="@item">@item</option>
+                                }
+
+                            }
+                        </select>
+                   
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Dəyiş</button>
+                    <a asp-action="Index" class="btn btn-secondary text-white">Geri Qayıt</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+     }
