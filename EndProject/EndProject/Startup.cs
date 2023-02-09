@@ -54,7 +54,7 @@ namespace EndProject
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                DataSeeding.Seed(app);
+                //DataSeeding.Seed(app);
             }
             else
             {

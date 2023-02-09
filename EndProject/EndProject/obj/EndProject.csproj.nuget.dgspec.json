@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\99450\\Desktop\\Project\\EndProject\\EndProject\\EndProject.csproj": {}
+    "C:\\Users\\99450\\Desktop\\EndProject\\EndProject\\EndProject\\EndProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\99450\\Desktop\\Project\\EndProject\\EndProject\\EndProject.csproj": {
+    "C:\\Users\\99450\\Desktop\\EndProject\\EndProject\\EndProject\\EndProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\99450\\Desktop\\Project\\EndProject\\EndProject\\EndProject.csproj",
+        "projectUniqueName": "C:\\Users\\99450\\Desktop\\EndProject\\EndProject\\EndProject\\EndProject.csproj",
         "projectName": "EndProject",
-        "projectPath": "C:\\Users\\99450\\Desktop\\Project\\EndProject\\EndProject\\EndProject.csproj",
+        "projectPath": "C:\\Users\\99450\\Desktop\\EndProject\\EndProject\\EndProject\\EndProject.csproj",
         "packagesPath": "C:\\Users\\99450\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\99450\\Desktop\\Project\\EndProject\\EndProject\\obj\\",
+        "outputPath": "C:\\Users\\99450\\Desktop\\EndProject\\EndProject\\EndProject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\99450\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -94,7 +94,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }
